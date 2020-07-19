@@ -1,0 +1,111 @@
+<%- include('partials/header.ejs') %>
+
+        <nav>
+            <a href="/">Overview</a>
+            <a href="/structure">Application Structure</a>
+            <a href="/sample">Sample Code</a>
+            <a id="current" href="/browsers">Supported Browsers</a>
+        </nav>
+        <main>
+            <h1>Supported Browsers</h1>
+            <figure id="main-figure">
+                <img src="/img/game-development.png" alt="Game Development" />
+            </figure>
+            <div>
+                <a id="main-content">
+                    <p>
+                    There are web browsers that supported WebGL. The list of supported browsers in the following tables. 
+                    Many modern browsers support WebGL, but some browsers partially or don't support WebGL. 
+                    Functionality of WebGL is also dependent on the GPU and others. The official WebGL website provides 
+                    more information about this with the simple test page.
+                   </p>
+                </a>
+            </div>
+            <br />
+            <br />
+            <div id="main-table">
+                <strong>Web Browsers</strong><br /><br />
+                <table>
+                    <tr class="table-header">
+                        <td><strong>Browser Name</strong></td>
+                        <td><strong>Version</strong></td>
+                        <td><strong>Support</strong></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Internet Explorer</td>
+                        <td>11 and above</td>
+                        <td>Complete support</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Google Chrome</td>
+                        <td>39 and above</td>
+                        <td>Complete support</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Safari</td>
+                        <td>8</td>
+                        <td>Complete support</td>
+                    </tr>
+                     <tr class="table-row">
+                        <td>Firefox</td>
+                        <td>36 and above</td>
+                        <td>Partial support</td>
+                    </tr>
+                     <tr class="table-row">
+                        <td>Opera</td>
+                        <td>27 and above</td>
+                        <td>Partial support</td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <strong>Mobile Browsers</strong><br /><br />
+                <table>
+                    <tr class="table-header">
+                        <td><strong>Browser Name</strong></td>
+                        <td><strong>Version</strong></td>
+                        <td><strong>Support</strong></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Chrome for Android</td>
+                        <td>42</td>
+                        <td>Partial support</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Android browser</td>
+                        <td>40</td>
+                        <td>Partial support</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>IOS Safari</td>
+                        <td>8.3</td>
+                        <td>Complete support</td>
+                    </tr>
+                     <tr class="table-row">
+                        <td>Opera Mini</td>
+                        <td>8</td>
+                        <td>not support</td>
+                    </tr>
+                     <tr class="table-row">
+                        <td>Blackberry Browser</td>
+                        <td>10</td>
+                        <td>Complete support</td>
+                    </tr>
+                     <tr class="table-row">
+                        <td>IE mobile</td>
+                        <td>10</td>
+                        <td>Partial support</td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <a href="#top">Back to top of page</a>
+        </main>
+        <br />>
+        <div id="navigation-buttom">
+            <a class="button" href="/">
+                <span>Overview</span>
+            </a>
+        </div>
+        
+<%- include('partials/footer.ejs') %>

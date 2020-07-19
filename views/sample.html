@@ -1,0 +1,97 @@
+<%- include('partials/header.ejs') %>
+
+        <nav>
+            <a href="/">Overview</a>
+            <a href="/structure">Application Structure</a>
+            <a id="current" href="/sample">Sample Code</a>
+            <a href="/browsers">Supported Browsers</a>
+        </nav>
+        <main>
+            <h1>Sample Code</h1>
+            <figure id="main-figure">
+                <img src="/img/programming.png" alt="Programming" />
+            </figure>
+            <div>
+                <strong>Canvas Tag</strong>
+                <p>&lt;canvas&gt; tag is used to draw graphs, composite photos compositions, and make animations in HTML5. 
+                 &lt;canvas&gt; element includes width, height, and all other HTML5 attributes like id, name, and class.</p>
+                <code>&lt;canvas id = "mycanvas" width = "100" height = "100"&gt;&lt;/canvas&gt;</code>
+                <br />
+                <br />
+                <ul>
+                    <li><a class="attribute">Id</a>: Id represents the identifier of the canvas element in the Document Object Model (DOM).</li>
+                    <li><a class="attribute">Width</a>: Width represents the width of the canvas.</li>
+                    <li><a class="attribute">Height</a>: Height represents the height of the canvas.</li>
+                </ul>
+                <br />
+                <code>
+                    &lt;html&gt;<br />
+                    &nbsp;&nbsp;&lt;head&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#mycanvas{border:1px solid red;}<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br />
+                    &nbsp;&nbsp;&lt;/head&gt;<br />
+                    &nbsp;&nbsp;&lt;body&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;canvas id="mycanvas" width="100" height="100"&gt;&lt;/canvas&gt;<br />
+                    &nbsp;&nbsp;&lt;/body&gt;<br />
+                    &lt;/html&gt;
+                </code>
+                <br />
+                <br />
+                <br />
+                <strong>Rendering Context</strong>
+                <p>The &lt;canvas&gt; is initially blank. To display something on the canvas element, we have to use a scripting language. 
+                This scripting language should access the rendering context and draw on it. With using getContext() that is 
+                the canvas element of DOM method, the rendering context and the context drawing functions are accessable 
+                to draw something on it.</p>
+                <code>
+                    &lt;!DOCTYPE HTML&gt;<br />
+                    &lt;html&gt;<br />
+                    &nbsp;&nbsp;&lt;body&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;canvas id = "mycanvas" width = "600" height = "200"&gt;&lt;/canvas&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var canvas = document.getElementById('mycanvas');<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var context = canvas.getContext('2d');<br />
+                    <br />	
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.font = '20pt Calibri';<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.fillStyle = 'green';<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context.fillText('Welcome to Tutorialspoint', 70, 70);<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br />
+                    &nbsp;&nbsp;&lt;/body&gt;<br />
+                    &lt;/html&gt;
+                </code>
+                <br />
+                <br />
+                <br />
+                <strong>WebGL Context</strong>
+                <p>WebGL applications is written in HTML &lt;canvas&gt; by creating a WebGL rendering context 
+                on the canvas element and passing the string experimental-webgl instead of using the 
+                canvas.getContext() method for 2D in the previous code.</p>
+                <code>
+                    &lt;!DOCTYPE HTML&gt;<br />
+                    &lt;html&gt;<br />
+                    &nbsp;&nbsp;&lt;canvas id = 'my_canvas'&gt;&lt;/canvas&gt;<br />
+                    &nbsp;&nbsp;&lt;script&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;var canvas = document.getElementById('my_canvas');<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;var gl = canvas.getContext('experimental-webgl');<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;gl.clearColor(0.9,0.9,0.8,1);<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;gl.clear(gl.COLOR_BUFFER_BIT);<br />
+                    &nbsp;&nbsp;&lt;/script&gt;<br />
+                    &lt;/html&gt;
+                </code>
+            </div>
+            <br /><br />
+            <strong>Tutorial YouTube Video</strong>
+            <br>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/bP7_FeP9kU4"></iframe>
+            <br /><br />
+            <a href="#top">Back to top of page</a>
+        </main>
+        <br>
+        <div id="navigation-buttom">
+            <a class="button" href="/browsers">
+                <span>Next: Supported Browsers</span>
+            </a>
+        </div>
+
+<%- include('partials/footer.ejs') %>

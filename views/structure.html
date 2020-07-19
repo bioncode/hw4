@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+
+        <nav>
+            <a href="/">Overview</a>
+            <a id="current" href="/structure">Application Structure</a>
+            <a href="/sample">Sample Code</a>
+            <a href="/browsers">Supported Browsers</a>
+        </nav>
+        <main>
+            <h1>Application Structure</h1>
+            <div>
+                <p>OpenGL is originally designed for embedded systems with the hardware capability and 
+                typically runs on desktop. OpenGL ES is the smaller version and is the standard API 
+                for 3D cell phone application development. WebGL is implemented with ES 2.0 and runs 
+                within the browser and can be shown on any operating systems.</p>
+                <p>JavaScript provide the resource to create the dynamic web pages.With the combination
+                with the shader language GLSL ES, the web pages are created by using WebGL and three 
+                programming languages HTML5, JavaScript, and GLSL ES. The figure compares the software 
+                architecture of traditional dynamic web pages (left side) and web pages using WebGL 
+                (right side).</p>
+                <p>WebGL keeps the same structure as standard dynamic web pages, only using HTML 
+                and JavaScript functionality.</p>
+                <figure id="main-figure">
+                    <img src="/img/structure.png" alt="Structure" />
+                    <p>Figure: The software architecture of dynamic web pages (left) and web pages using WebGL (right)</p> 
+                </figure>
+            </div>
+        </main>
+        <div id="navigation-buttom">
+            <a class="button" href="/sample">
+                <span>Next: Sample Code</span>
+            </a>
+        </div>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,46 @@
+<%- include('partials/header.ejs') %>
+
+        <nav>
+            <a id="current" href="/">Overview</a>
+            <a href="/structure">Application Structure</a>
+            <a href="/sample">Sample Code</a>
+            <a href="/browsers">Supported Browsers</a>
+        </nav>
+        <main>
+            <h1>Overview of WebGL</h1>
+            <div>
+                <a id="main-content">
+                    <figure>
+                        <img src="/img/reflection.png" alt="Reflection" />
+                    </figure>
+                    <div>
+                        <p>WebGL (Web Graphics Library) is the standard programming library for the purpose of 
+                        rendering 2D graphics and interactive 3D graphics on the web.</p>
+                        <p>OpenGL is typically used for the low level 3D grahics of mobile devices, and OpenGL 
+                        ES (Embedded Systems) 2.0 library derives to WebGL for the specific web grahpics.</p>
+                        <p>There is the similarity between WebGL and OpenGL, and 3D graphics of both perform 
+                        well on the hardware.</p>
+                        <p>Client-based rendering is used to render 3D scenes in WebGL.</p>
+                        <p>Images are received by the client to perform locally in the grapic hardware.</p>
+                        <p>HTML5 provides the &lt;canvas&gt; tag to draw computer graphics dynamically using JavaScript.</p>
+                        <p>The &lt;canvas&gt; tag defines a drawing area on a web page. JavaScript methods is used to 
+                        draw points, lines, rectangles, circles, and more.</p>
+                        <p>Most web browsers support WebGL, but some partially or doesn't support WebGL features.</p>
+                    </div>
+                </a>
+                <strong>Sources are found from: </strong><a href="https://www.tutorialspoint.com/webgl/webgl_introduction.htm" target="_blank">WebGL Introduction</a> 
+                <a href="https://en.wikipedia.org/wiki/WebGL" target="_blank">WebGL Wikipedia</a> 
+                <a href="https://www.cs.unm.edu/~angel/SIGGRAPH14/Introduction%20to%20WebGL%20Programming.pdf" target="_blank">Introduction to WebGL Programming</a>
+            </div>
+        </main>
+        <div id="navigation-buttom">
+            <a class="button" href="/structure">
+                <span>Next: Application Structure</span>
+            </a>
+        </div>
+        <div id="fake-personal-info">
+            Personal Info: <br>
+            Phone: <%= phone %> <br>
+            Email: <%= email %>
+        </div>
+<%- include('partials/footer.ejs') %>

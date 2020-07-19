@@ -1,22 +1,30 @@
 const express = require("express");
 const app = express();
+
+var faker = require('faker');
+var phone = faker.phone.phoneNumber();
+console.log(phone);
+var email = faker.internet.email();
+console.log(email);
+
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 
 //routes
 app.get("/", function(req, res){
-    // res.send("It works!");
-    res.render("index.html");
+    res.render("index.ejs", {"phone":phone, "email":email});
 });
 
-app.get("/mercury", function(req, res){
-    // res.send("This will be Mercury web page!");
-    res.render("mercury.html");
+app.get("/structure", function(req, res){
+    res.render("structure.html");
 });
 
-app.get("/venus", function(req, res){
-    // res.send("This will be Venus web page!");
-    res.render("venus.html");
+app.get("/sample", function(req, res){
+    res.render("sample.html");
+});
+
+app.get("/browsers", function(req, res){
+    res.render("browsers.html");
 });
 
 //starting server
