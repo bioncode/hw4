@@ -3,9 +3,9 @@ const app = express();
 
 var faker = require('faker');
 var phone = faker.phone.phoneNumber();
-console.log(phone);
+// console.log(phone);
 var email = faker.internet.email();
-console.log(email);
+// console.log(email);
 
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
@@ -16,15 +16,15 @@ app.get("/", function(req, res){
 });
 
 app.get("/structure", function(req, res){
-    res.render("structure.html");
+    res.render("structure.ejs", {"phone":phone, "email":email});
 });
 
 app.get("/sample", function(req, res){
-    res.render("sample.html");
+    res.render("sample.ejs", {"phone":phone, "email":email});
 });
 
 app.get("/browsers", function(req, res){
-    res.render("browsers.html");
+    res.render("browsers.ejs", {"phone":phone, "email":email});
 });
 
 //starting server
