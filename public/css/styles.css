@@ -47,14 +47,14 @@ nav a:hover {
     padding-bottom: 10px;
 }
 
-#current {
+.current {
     color: grey;
     font-weight: bold;
     background-color: white;
     border-radius: 5px 5px 0 0;
 }
 
-#current:hover {
+.current:hover {
     color: grey;
     border-bottom: 4px solid white;
     padding: .9em;
